@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="hi-EN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags - Dynamic -->
+    <title id="meta-title">Dental Clinic | Best Dentist in Your City</title>
+    <meta name="description" id="meta-description" content="Expert dental care with years of clinical excellence. Book your appointment today.">
+    <meta name="keywords" id="meta-keywords" content="dentist, dental clinic, dental care, implants, cosmetic dentistry">
+    <meta name="author" content="Dental Clinic">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" id="og-title" content="Dental Clinic | Best Dentist">
+    <meta property="og:description" id="og-description" content="Expert dental care with years of clinical excellence.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" id="og-image" content="">
+    
+    <!-- Favicon -->
+    <link id="favicon-link" rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--primary-color)',
+                        secondary: 'var(--secondary-color)',
+                        accent: 'var(--accent-color)',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style id="dynamic-styles">
+        :root {
+            --primary-color: #0891B2;
+            --secondary-color: #0D9488;
+            --accent-color: #EA580C;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 overflow-x-hidden">
+
+    <!-- Top Bar -->
+    <div class="bg-gray-900 text-white py-2 px-4 text-sm" id="top-bar">
+        <div class="container mx-auto flex justify-between items-center flex-wrap gap-2">
+            <div class="flex items-center gap-4 flex-wrap">
+                <span id="clinic-address"><i class="fas fa-map-marker-alt mr-2"></i>Your Clinic Address</span>
+                <span class="hidden sm:inline">|</span>
+                <span class="hidden sm:inline" id="experience-badge"><i class="fas fa-medal mr-2 text-yellow-400"></i>16 Years Experience</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a id="top-phone" href="tel:+919999999999" class="hover:text-primary transition"><i class="fas fa-phone mr-2"></i>+91 99999 99999</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 w-full z-50 transition-all duration-300 shadow-sm bg-white/95 backdrop-blur-md" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div id="logo-container" class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg overflow-hidden">
+                        <i class="fas fa-tooth" id="logo-icon"></i>
+                        <img id="logo-img" src="" alt="Logo" class="hidden w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800 leading-tight" id="clinic-name">Dental Clinic</h1>
+                        <p class="text-xs text-secondary font-semibold tracking-wide" id="doctor-title">DR. NAME</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary font-medium transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary font-medium transition">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary font-medium transition">Services</a>
+                    <a href="#reviews" class="text-gray-700 hover:text-primary font-medium transition">Reviews</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary font-medium transition">Contact</a>
+                    <a id="nav-whatsapp" href="https://wa.me/919999999999" target="_blank" class="bg-green-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition flex items-center gap-2">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="hidden lg:inline">WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-2xl text-gray-700" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t shadow-lg">
+            <div class="flex flex-col p-4 space-y-3">
+                <a href="#home" class="text-gray-700 py-2 hover:text-primary">Home</a>
+                <a href="#about" class="text-gray-700 py-2 hover:text-primary">About</a>
+                <a href="#services" class="text-gray-700 py-2 hover:text-primary">Services</a>
+                <a href="#reviews" class="text-gray-700 py-2 hover:text-primary">Reviews</a>
+                <a href="#contact" class="text-gray-700 py-2 hover:text-primary">Contact</a>
+                <a id="mobile-whatsapp" href="https://wa.me/919999999999" class="bg-green-500 text-white py-3 rounded-lg font-semibold text-center flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Now
+                </a>
+                <a id="mobile-call" href="tel:+919999999999" class="bg-primary text-white py-3 rounded-lg font-semibold text-center flex items-center justify-center gap-2">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-20 pb-20 lg:pt-28 lg:pb-32 overflow-hidden bg-gradient-to-br from-cyan-50 via-white to-teal-50">
+        <div class="absolute top-20 right-0 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-secondary opacity-5 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 lg:pr-12 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md mb-6 border border-primary/20">
+                        <i class="fas fa-medal text-yellow-500 text-lg"></i>
+                        <span class="text-primary font-semibold text-sm" id="hero-badge">16 Years of Clinical Excellence</span>
+                    </div>
+                    
+                    <h1 class="text-4xl lg:text-5xl font-bold leading-tight mb-6" id="hero-title">
+                        Your Journey to a <br>
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Confident Smile</span> ✨
+                    </h1>
+                    
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed" id="hero-description">
+                        At our Dental Clinic, we combine expertise with a caring approach to ensure your dental journey is as comfortable and painless as possible.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                        <a id="hero-whatsapp" href="https://wa.me/919999999999" target="_blank" class="bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transform hover:scale-105 transition flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                            Book Appointment
+                        </a>
+                        <a id="hero-call" href="tel:+919999999999" class="bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transform hover:scale-105 transition flex items-center justify-center gap-2">
+                            <i class="fas fa-phone-alt"></i>
+                            Call Now
+                        </a>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm text-gray-600" id="hero-features">
+                        <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+                            <i class="fas fa-check-circle text-green-500"></i>
+                            <span>Painless Treatments</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+                            <i class="fas fa-check-circle text-green-500"></i>
+                            <span>Advanced Technology</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+                            <i class="fas fa-check-circle text-green-500"></i>
+                            <span>Personalized Care</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 mt-12 lg:mt-0 relative">
+                    <div class="relative animate-float">
+                        <div class="bg-white p-4 rounded-3xl shadow-2xl">
+                            <img id="hero-image" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=500&fit=crop" alt="Dental Clinic" class="rounded-2xl w-full object-cover h-96">
+                        </div>
+                        
+                        <!-- Floating Cards -->
+                        <div class="absolute -left-4 top-1/4 bg-white p-4 rounded-2xl shadow-xl z-20 animate-bounce" style="animation-duration: 3s;">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-white">
+                                    <i class="fas fa-award text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">16+ Years</p>
+                                    <p class="text-xs text-gray-500">Experience</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="absolute -right-4 bottom-1/4 bg-white p-4 rounded-2xl shadow-xl z-20 animate-bounce" style="animation-duration: 4s;">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                                    <i class="fas fa-heart text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">Caring</p>
+                                    <p class="text-xs text-gray-500">Approach</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 scroll-reveal">
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-cyan-100 to-teal-100 rounded-3xl p-8">
+                            <img id="doctor-image" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&h=600&fit=crop" alt="Doctor" class="rounded-2xl w-full shadow-lg">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border-2 border-primary">
+                            <div class="text-center">
+                                <i class="fas fa-medal text-4xl text-yellow-500 mb-2"></i>
+                                <p class="text-3xl font-bold text-gray-800" id="exp-years">16</p>
+                                <p class="text-sm text-gray-600">Years of<br>Excellence</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 scroll-reveal">
+                    <h3 class="text-primary font-semibold mb-2 uppercase tracking-wide">Meet Our Doctor</h3>
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6" id="doctor-name">Dr. Doctor Name</h2>
+                    
+                    <div class="space-y-4 mb-6" id="doctor-highlights">
+                        <div class="flex items-start gap-4 p-4 bg-yellow-50 rounded-2xl border-l-4 border-yellow-400">
+                            <i class="fas fa-trophy text-2xl text-yellow-600 mt-1"></i>
+                            <div>
+                                <p class="font-bold text-gray-800 text-lg">16 Years of Clinical Experience</p>
+                                <p class="text-gray-600">Extensive expertise in all aspects of dentistry</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 p-4 bg-cyan-50 rounded-2xl border-l-4 border-primary">
+                            <i class="fas fa-graduation-cap text-2xl text-primary mt-1"></i>
+                            <div>
+                                <p class="font-bold text-gray-800 text-lg">Expert Qualifications</p>
+                                <p class="text-gray-600">Advanced training in cosmetic and implant dentistry</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 p-4 bg-pink-50 rounded-2xl border-l-4 border-pink-400">
+                            <i class="fas fa-heart text-2xl text-pink-500 mt-1"></i>
+                            <div>
+                                <p class="font-bold text-gray-800 text-lg">Caring Approach</p>
+                                <p class="text-gray-600">Gentle, patient-centered care for stress-free visits</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed" id="doctor-bio">
+                        Our doctor combines extensive clinical expertise with genuine compassion to deliver exceptional dental care. Every patient deserves a comfortable experience and a confident smile.
+                    </p>
+
+                    <div class="flex gap-4">
+                        <a href="https://wa.me/919999999999" id="about-whatsapp" class="bg-green-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition flex items-center gap-2">
+                            <i class="fab fa-whatsapp"></i> Consult on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <h3 class="text-primary font-semibold mb-2 uppercase tracking-wide">Our Services</h3>
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Comprehensive Dental Care</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">From routine check-ups to advanced cosmetic procedures, we make your experience seamless and stress-free</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
+                <!-- Services will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-gradient-to-br from-primary to-secondary text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Why Choose Us?</h2>
+                <p class="text-cyan-100 max-w-2xl mx-auto">Experience the difference with our patient-centered approach</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8" id="why-choose-grid">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition scroll-reveal">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl text-primary mx-auto mb-4">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Expert Care</h3>
+                    <p class="text-sm text-cyan-100">Years of clinical experience</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition scroll-reveal">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl text-primary mx-auto mb-4">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Gentle Touch</h3>
+                    <p class="text-sm text-cyan-100">Painless procedures</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition scroll-reveal">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl text-primary mx-auto mb-4">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Modern Tech</h3>
+                    <p class="text-sm text-cyan-100">Advanced equipment</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition scroll-reveal">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl text-primary mx-auto mb-4">
+                        <i class="fas fa-smile-beam"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Happy Patients</h3>
+                    <p class="text-sm text-cyan-100">Confident smiles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews
